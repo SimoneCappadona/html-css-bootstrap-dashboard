@@ -40,6 +40,9 @@ img {
   height: calc(100vh - 75px);
   overflow: auto;
 }
+#offcanvasRight {
+  width: 100%;
+}
 .input-group-text {
   border: none;
   background-color: #e5e5e5;
@@ -77,5 +80,8 @@ img {
 @media screen and (min-width: 992px) {
   #sidebar {
     width: 150px;
+  }
+  #offcanvasRight {
+    width: 800px;
   }
 }
