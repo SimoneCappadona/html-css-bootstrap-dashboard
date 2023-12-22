@@ -18,6 +18,7 @@ img {
 .fa-circle-question,
 .fa-ellipsis-vertical {
   color: #5b5858;
+  cursor: pointer;
 }
 /* Sidebar */
 
