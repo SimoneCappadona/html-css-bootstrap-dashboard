@@ -32,8 +32,11 @@
                 <span class="input-group-text " id="basic-addon1"><i class="fa-solid fa-magnifying-glass p-2"
                         style="color: #000;"></i></span>
                 <input type="text" class="form-control fw-semibold" placeholder="Prova a cercare: Lezione di Laravel"
-                    aria-label="Username" aria-describedby="basic-addon1">
+                    aria-label="Search" aria-describedby="basic-addon1">
             </div>
+            <span><i class="fa-solid fa-list-ul p-1 d-none d-lg-inline"></i></span>
+            <span><i class="fa-solid fa-circle-question p-1 d-none d-lg-inline"></i></span>
+            <span><i class="fa-solid fa-ellipsis-vertical p-1 d-none d-lg-inline"></i></span>
             <div class="dropdown me-2 ">
                 <button type="button" class="btn border-0" data-bs-toggle="dropdown" aria-expanded="false"
                     data-bs-offset="10,20">
@@ -63,7 +66,7 @@
                 </i>
                 <p class="d-none d-lg-inline ">Signal</p>
             </button>
-            <button type="button" class="btn btn-outline-light  mt-auto ">
+            <button type="button" class="btn btn-outline-light  mt-auto mb-4">
                 <i class="fa-solid fa-gear ">
                 </i>
                 <p class="d-none d-lg-inline ">Admin</p>
@@ -73,8 +76,39 @@
             <div class="blue-box mb-4 container-fluid ">
                 <div class=" d-md-flex justify-content-md-between p-3">
                     <div class="text-white order-md-1">Nuovo Studente
-                        <button type="button" class="btn btn-outline-light mx-3"><i
+                        <button class="btn btn-outline-light mx-3" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
                                 class="fa-solid fa-plus"></i></button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="d-flex">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Mario">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Cognome</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Rossi">
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <input class="form-control" type="text" placeholder="Default input"
+                                        aria-label="default input example">
+                                    <input class="form-control" type="text" placeholder="Default input"
+                                        aria-label="default input example">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <div class="d-flex align-items-center">
@@ -87,6 +121,13 @@
                                 class="fa-solid fa-angles-right text-center  mx-1"></i>
                             <span class="badge text-bg-subtle h-25 rounded-pill mx-1 p-2 d-lg-none"><i
                                     class="fa-solid fa-plus"></i></span>
+                            <span class="badge text-bg-subtle h-25 rounded-pill mx-1 p-2 d-none d-lg-inline">Boolean
+                                mobile app</span>
+                            <span class="badge text-bg-subtle h-25 rounded-pill mx-1 p-2 d-none d-lg-inline">Boolean web
+                                app</span>
+                            <span class="badge text-bg-subtle h-25 rounded-pill mx-1 p-2 d-none d-lg-inline">Boolean
+                                blog
+                                app</span>
                         </div>
                     </div>
                     <div class="text-start">
@@ -106,6 +147,8 @@
                                 <thead>
                                     <tr>
                                         <th>Nome</th>
+                                        <th class="d-none d-md-table-cell">Data inizio</th>
+                                        <th class="d-none d-md-table-cell">ROI</th>
                                         <th>Stato</th>
                                         <th>Azione</th>
                                     </tr>
@@ -114,6 +157,10 @@
                                     <tr>
                                         <td class="fw-semibold"><img src="./img/class-avatar.jpg" alt=""
                                                 class="avatar-class p-2">Classe 75</td>
+
+
+                                        <td class="d-none d-md-table-cell fw-semibold">15 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell fw-semibold">20%</td>
                                         <td><span class="badge text-bg-success">Done</span></td>
                                         <td><button type="button" class="btn btn-outline-secondary"><i
                                                     class="fa-solid fa-pencil"></i></button>
@@ -124,6 +171,9 @@
                                     <tr>
                                         <td class="fw-semibold"><img src="./img/class-avatar.jpg" alt=""
                                                 class="avatar-class p-2">Classe 76</td>
+
+                                        <td class="d-none d-md-table-cell fw-semibold">16 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell fw-semibold">20%</td>
                                         <td><span class="badge text-bg-success">Done </span></td>
                                         <td><button type="button" class="btn btn-outline-secondary"><i
                                                     class="fa-solid fa-pencil"></i></button>
@@ -134,6 +184,9 @@
                                     <tr>
                                         <td class="fw-semibold"><img src="./img/class-avatar.jpg" alt=""
                                                 class="avatar-class p-2">Classe 77</td>
+
+                                        <td class="d-none d-md-table-cell fw-semibold">17 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell fw-semibold">20%</td>
                                         <td><span class="badge text-bg-warning text-white">Process </span></td>
                                         <td><button type="button" class="btn btn-outline-secondary"><i
                                                     class="fa-solid fa-pencil"></i></button>
@@ -144,6 +197,9 @@
                                     <tr>
                                         <td class="fw-semibold"><img src="./img/class-avatar.jpg" alt=""
                                                 class="avatar-class p-2">Classe 78</td>
+
+                                        <td class="d-none d-md-table-cell fw-semibold">18 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell fw-semibold">20%</td>
                                         <td><span class="badge text-bg-success">Done </span></td>
                                         <td><button type="button" class="btn btn-outline-secondary"><i
                                                     class="fa-solid fa-pencil"></i></button>
@@ -154,6 +210,9 @@
                                     <tr>
                                         <td class="fw-semibold"><img src="./img/class-avatar.jpg" alt=""
                                                 class="avatar-class p-2">Classe 79</td>
+
+                                        <td class="d-none d-md-table-cell fw-semibold">19 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell fw-semibold">20%</td>
                                         <td><span class="badge text-bg-danger">Failed </span></td>
                                         <td><button type="button" class="btn btn-outline-secondary"><i
                                                     class="fa-solid fa-pencil"></i></button>
@@ -164,6 +223,10 @@
                                     <tr>
                                         <td class="fw-semibold"><img src="./img/class-avatar.jpg" alt=""
                                                 class="avatar-class p-2">Classe 80</td>
+
+                                        <td class="d-none d-md-table-cell fw-semibold">20 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell fw-semibold">20%</td>
+
                                         <td><span class="badge text-bg-success">Done </span></td>
                                         <td><button type="button" class="btn btn-outline-secondary"><i
                                                     class="fa-solid fa-pencil"></i></button>
@@ -174,6 +237,9 @@
                                     <tr>
                                         <td class="fw-semibold"><img src="./img/class-avatar.jpg" alt=""
                                                 class="avatar-class p-2">Classe 81</td>
+
+                                        <td class="d-none d-md-table-cell fw-semibold">21 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell fw-semibold">20%</td>
                                         <td><span class="badge text-bg-danger">Failed </span></td>
                                         <td><button type="button" class="btn btn-outline-secondary"><i
                                                     class="fa-solid fa-pencil"></i></button>
@@ -184,6 +250,9 @@
                                     <tr>
                                         <td class="fw-semibold"><img src="./img/class-avatar.jpg" alt=""
                                                 class="avatar-class p-2">Classe 82</td>
+
+                                        <td class="d-none d-md-table-cell fw-semibold">22 Feb 2021</td>
+                                        <td class="d-none d-md-table-cell fw-semibold">20%</td>
                                         <td><span class="badge text-bg-success">Done </span></td>
                                         <td><button type="button" class="btn btn-outline-secondary"><i
                                                     class="fa-solid fa-pencil"></i></button>
@@ -209,9 +278,7 @@
                                     </h2>
                                     <div id="flush-collapseOne" class="accordion-collapse collapse"
                                         data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">Placeholder content for this accordion, which is
-                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
-                                            first item's accordion body.</div>
+                                        <div class="accordion-body">Clicca sul + in alto nella sezione blu. </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -224,10 +291,7 @@
                                     </h2>
                                     <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                         data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">Placeholder content for this accordion, which is
-                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
-                                            second item's accordion body. Let's imagine this being filled with some
-                                            actual content.</div>
+                                        <div class="accordion-body">Clicca sull'icona della campanella.</div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -240,12 +304,10 @@
                                     </h2>
                                     <div id="flush-collapseThree" class="accordion-collapse collapse"
                                         data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">Placeholder content for this accordion, which is
-                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
-                                            third item's accordion body. Nothing more exciting happening here in terms
-                                            of content, but just filling up the space to make it look, at least at first
-                                            glance, a bit more representative of how this would look in a real-world
-                                            application.</div>
+                                        <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. In sed dolorem ullam ea mollitia ad numquam quam inventore, iure
+                                            aspernatur tempore dolores odio accusantium culpa ducimus aliquid eius,
+                                            reiciendis expedita.</div>
                                     </div>
                                 </div>
                             </div>
@@ -276,7 +338,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="card mt-5">
+                        <div class="card mt-5 mb-4">
                             <img src="./img/stats.jpeg" class="card-img-top" alt="active utent">
                             <div class="card-body">
                                 <h5 class="card-title">Utenti attivi</h5>
